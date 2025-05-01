@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проекты Marvel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Список проектов Marvel</h1>
+    <input type="text" id="searchInput" placeholder="Поиск по проектам..." />
+    <button id="themeToggle">Сменить тему</button>
+  </header>
+
+  <main id="projectList"></main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <div id="modalData"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
