@@ -1,13 +1,15 @@
-{
-  "projects": [
+{"projects": [
     {
       "title": "Железный человек 🤖",
       "date": "14 апреля 2008 года",
       "duration": "2:06:10",
       "director": "Джон Фавро",
       "voice": "Дубляж",
-      "imdb": "7.9",
-      "kp": "7.8"
+      "imdb": "",
+      "kp": "",
+      "link": "https://rezka.ag/films/action/242-zheleznyy-chelovek-2008.html",
+      "section": "Сага Бесконечности",
+      "subsection": "Фаза 1"
     },
     {
       "title": "Невероятный Халк 😡",
@@ -15,8 +17,131 @@
       "duration": "1:52:14",
       "director": "Луи Летерье",
       "voice": "Дубляж",
-      "imdb": "6.6",
-      "kp": "6.8"
-    }
+      "imdb": "",
+      "kp": "",
+      "link": "https://rezka.ag/films/action/3186-neveroyatnyy-halk-2008.html",
+      "section": "Сага Бесконечности",
+      "subsection": "Фаза 1"
+    },
+    {
+      "title": "Железный человек 2 ⚙️",
+      "date": "28 апреля 2010 года",
+      "duration": "2:04:53",
+      "director": "Джон Фавро",
+      "voice": "Дубляж",
+      "imdb": "",
+      "kp": "",
+      "link": "https://rezka.ag/films/action/3185-zheleznyy-chelovek-2-2010.html",
+      "section": "Сага Бесконечности",
+      "subsection": "Фаза 1"
+    },
+    {
+      "title": "Тор ⚡",
+      "date": "21 апреля 2011 года",
+      "duration": "1:54:55",
+      "director": "Кеннет Брана",
+      "voice": "Дубляж",
+      "imdb": "",
+      "kp": "",
+      "link": "https://rezka.ag/films/fantasy/240-tor-2011.html",
+      "section": "Сага Бесконечности",
+      "subsection": "Фаза 1"
+    },
+    {
+      "title": "Первый мститель 🛡️",
+      "date": "22 июля 2011 года",
+      "duration": "2:04:08",
+      "director": "Джо Джонстон",
+      "voice": "Дубляж",
+      "imdb": "",
+      "kp": "",
+      "link": "https://rezka.ag/films/action/248-pervyy-mstitel-2011.html",
+      "section": "Сага Бесконечности",
+      "subsection": "Фаза 1"
+    },
+    {
+      "title": "Мстители 🗽",
+      "date": "26 апреля 2012 года",
+      "duration": "2:22:21",
+      "director": "Джосс Уидон",
+      "voice": "Дубляж",
+      "imdb": "",
+      "kp": "",
+      "link": "https://rezka.ag/films/fantasy/241-mstiteli-2012.html",
+      "section": "Сага Бесконечности",
+      "subsection": "Фаза 1"
+    },
+    {
+  "title": "Железный человек 3 🔥",
+  "date": "18 апреля 2013 года",
+  "duration": "2:10:45",
+  "director": "Шейн Блэк",
+  "voice": "Дубляж",
+  "imdb": "",
+  "kp": "",
+  "link": "https://rezka.ag/films/action/243-zheleznyy-chelovek-3-2013.html",
+  "section": "Сага Бесконечности",
+  "subsection": "Фаза 2"
+},
+{
+  "title": "Тор 2: Царство тьмы ⚔️",
+  "date": "31 октября 2013 года",
+  "duration": "1:52:48",
+  "director": "Алан Тейлор",
+  "voice": "Дубляж",
+  "imdb": "",
+  "kp": "",
+  "link": "https://rezka.ag/films/fantasy/239-tor-2-carstvo-tymy-2013.html",
+  "section": "Сага Бесконечности",
+  "subsection": "Фаза 2"
+},
+{
+  "title": "Первый мститель: Другая война ❄️",
+  "date": "26 марта 2014 года",
+  "duration": "2:15:17",
+  "director": "Энтони и Джо Руссо",
+  "voice": "Дубляж",
+  "imdb": "",
+  "kp": "",
+  "link": "https://rezka.ag/films/action/247-pervyy-mstitel-drugaya-voyna-2014.html",
+  "section": "Сага Бесконечности",
+  "subsection": "Фаза 2"
+},
+{
+  "title": "Стражи Галактики 🚀",
+  "date": "31 июля 2014 года",
+  "duration": "2:01:34",
+  "director": "Джеймс Ганн",
+  "voice": "Дубляж",
+  "imdb": "",
+  "kp": "",
+  "link": "https://rezka.ag/films/fantasy/229-strashi-galaktiki-2014.html",
+  "section": "Сага Бесконечности",
+  "subsection": "Фаза 2"
+},
+{
+  "title": "Мстители: Эра Альтрона 🤖",
+  "date": "23 апреля 2015 года",
+  "duration": "2:21:05",
+  "director": "Джосс Уидон",
+  "voice": "Дубляж",
+  "imdb": "",
+  "kp": "",
+  "link": "https://rezka.ag/films/fantasy/238-mstiteli-era-altrona-2015.html",
+  "section": "Сага Бесконечности",
+  "subsection": "Фаза 2"
+},
+{
+  "title": "Человек-муравей 🐜",
+  "date": "16 июля 2015 года",
+  "duration": "1:57:41",
+  "director": "Пейтон Рид",
+  "voice": "Дубляж",
+  "imdb": "",
+  "kp": "",
+  "link": "https://rezka.ag/films/fantasy/244-chelovek-muravey-2015.html",
+  "section": "Сага Бесконечности",
+  "subsection": "Фаза 2"
+}
   ]
 }
