@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Проекты Marvel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Список проектов Marvel</h1>
-    <input type="text" id="searchInput" placeholder="Поиск по проектам..." />
-    <button id="themeToggle">Сменить тему</button>
+    <h1>Все проекты Marvel</h1>
+    <input type="text" id="search" placeholder="Поиск..."/>
+    <button id="theme-toggle">Сменить тему</button>
   </header>
 
-  <main id="projectList"></main>
+  <main id="project-list"></main>
 
-  <div id="modal" class="modal">
+  <div id="modal" class="modal hidden">
     <div class="modal-content">
-      <span class="close-button" id="closeModal">&times;</span>
-      <div id="modalData"></div>
+      <button id="close-modal">×</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-date"></p>
+      <p id="modal-directors"></p>
+      <p id="modal-duration"></p>
+      <p id="modal-rating"></p>
+      <a id="modal-link" href="#" target="_blank">Смотреть</a>
     </div>
   </div>
 
