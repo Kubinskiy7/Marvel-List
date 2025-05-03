@@ -1,59 +1,67 @@
-const projectList = document.getElementById("projectList");
-const searchInput = document.getElementById("searchInput");
-const modal = document.getElementById("modal");
-const modalData = document.getElementById("modalData");
-const closeModal = document.getElementById("closeModal");
-const themeToggle = document.getElementById("themeToggle");
+const list = document.getElementById('project-list');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('close-modal');
+const search = document.getElementById('search');
+const themeToggle = document.getElementById('theme-toggle');
 
-// Load projects
-fetch("projects.json")
-  .then((res) => res.json())
-  .then((data) => {
-    data.projects.forEach((project, index) => {
-      const card = document.createElement("div");
-      card.className = "project-card";
-      card.dataset.index = index;
-      card.innerHTML = `<strong>${index + 1}. ${project.title}</strong><br><small>${project.date}</small>`;
-      projectList.appendChild(card);
-    });
+let data = [];
 
-    document.querySelectorAll(".project-card").forEach(card => {
-      card.addEventListener("click", () => {
-        const index = card.dataset.index;
-        const p = data.projects[index];
-        modalData.innerHTML = `
-          <h2>${p.title}</h2>
-          <p><strong>Дата:</strong> ${p.date}</p>
-          <p><strong>Продолжительность:</strong> ${p.duration}</p>
-          <p><strong>Режиссёр:</strong> ${p.director}</p>
-          <p><strong>Озвучка:</strong> ${p.voice}</p>
-          <p><strong>IMDb:</strong> ${p.imdb || "—"}</p>
-          <p><strong>Кинопоиск:</strong> ${p.kp || "—"}</p>
-        `;
-        modal.style.display = "flex";
-      });
-    });
+fetch('projects.json')
+  .then(res => res.json())
+  .then(json => {
+    data = json;
+    renderList();
   });
 
-// Search scroll
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
-  const cards = document.querySelectorAll(".project-card");
-  for (let card of cards) {
-    const title = card.textContent.toLowerCase();
-    if (title.includes(query)) {
-      card.scrollIntoView({ behavior: "smooth", block: "center" });
-      break;
+function renderList() {
+  list.innerHTML = '';
+  let lastSection = '';
+
+  data.forEach(project => {
+    if (project.section !== lastSection) {
+      const sectionTitle = document.createElement('h2');
+      sectionTitle.className = 'section-title';
+      sectionTitle.textContent = project.section;
+      list.appendChild(sectionTitle);
+      lastSection = project.section;
     }
-  }
+
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.textContent = `${project.title} (${new Date(project.date).getFullYear()})`;
+    card.dataset.id = project.id;
+    card.onclick = () => openModal(project);
+    list.appendChild(card);
+  });
+}
+
+function openModal(project) {
+  modal.classList.remove('hidden');
+  document.getElementById('modal-title').textContent = project.title;
+  document.getElementById('modal-date').textContent = `Дата выхода: ${project.date}`;
+  document.getElementById('modal-directors').textContent = `Режиссёр: ${project.directors}`;
+  document.getElementById('modal-duration').textContent = `Длительность: ${project.duration}`;
+  document.getElementById('modal-rating').textContent = `IMDb: ${project.imdb} | Кинопоиск: ${project.kinopoisk}`;
+  document.getElementById('modal-link').href = project.link;
+}
+
+closeBtn.onclick = () => modal.classList.add('hidden');
+
+search.addEventListener('input', e => {
+  const value = e.target.value.toLowerCase();
+  const card = Array.from(document.getElementsByClassName('project-card'))
+    .find(el => el.textContent.toLowerCase().includes(value));
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
-// Close modal
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+themeToggle.onclick = () => {
+  const html = document.documentElement;
+  const newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  html.dataset.theme = newTheme;
+};
 
-// Toggle theme
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
+// Смена темы при старте по системной
+window.addEventListener('DOMContentLoaded', () => {
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
 });
